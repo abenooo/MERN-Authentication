@@ -4,7 +4,8 @@
   "description": "mern auth app",
   "main": "server.js",
   "scripts": {
-    "server": "nodemon"
+    "server": "nodemon",
+    "test":"cross-env NODE_ENV=developemnt jest"
   },
   "keywords": [],
   "author": "Abenezer K",
