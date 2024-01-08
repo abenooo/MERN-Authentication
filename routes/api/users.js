@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const User = require("../../models/User");
-
+const {check, validationResult } = require("express-validator");
 router.get("/", (req, res) => res.send("User route"));
 router.post("/", async (req, res) => {
   const { name, email, password } = req.body;
@@ -27,6 +27,5 @@ router.post("/", async (req, res) => {
     res.status(500).send("Server error");
   }
 });
-
 
 module.exports = router;
