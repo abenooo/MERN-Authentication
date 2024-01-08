@@ -9,10 +9,10 @@ const { check, validationResult } = require("express-validator");
 // GET route
 router.get("/", auth, async (req, res) => {
   try {
-    const user = await User.findById(req.user.id).select(-password);
+    const user = await User.findById(req.user.id).select("-password");
     res.json(user);
   } catch (error) {
-    console.error(err.message);
+    console.error(error.message);
     res.status(500).send("Server Error");
   }
 });
@@ -31,7 +31,7 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const [email, password] = req.body;
+    const {email, password} = req.body;
 
     try {
       let user = await User.findOne({ email });
@@ -66,11 +66,10 @@ router.post(
         }
       );
     } catch (error) {
-        console.log(error.message);
-        res.status(500).send("Server Error");
+      console.log(error.message);
+      res.status(500).send("Server Error");
     }
   }
 );
 
-
-module.export = router; 
+module.exports = router;
