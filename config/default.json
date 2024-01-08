@@ -1,3 +1,4 @@
 {
-    "mongoDB_URL" : "mongodb+srv://root:zJwAe4unI7uWhExg@codex.ee42hsr.mongodb.net/mernAuth?retryWrites=true&w=majority"
+    "mongoDB_URL" : "mongodb+srv://root:zJwAe4unI7uWhExg@codex.ee42hsr.mongodb.net/mernAuth?retryWrites=true&w=majority",
+    "jwtSecret":"secrettoken"
 }
