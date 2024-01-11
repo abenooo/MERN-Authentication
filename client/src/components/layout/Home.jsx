@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <section>
@@ -13,8 +14,8 @@ const Home = () => {
           </p>
 
           <div>
-            <a href="register.html">Register</a>
-            <a href="login.html">Login</a>
+            <Link to="/register.html">Register</Link>
+            <Link to="/login.html">Login</Link>
           </div>
         </div>
       </div>
