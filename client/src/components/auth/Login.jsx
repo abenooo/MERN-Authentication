@@ -1,9 +1,17 @@
-import React from 'react'
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 const Login = () => {
-  return (
-    <div>Login</div>
-  )
-}
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
 
-export default Login
+  const { email, password } = formData;
+  const onChange = (e) => ({
+    ...formData,
+    [e.target.name]:e.target.value,
+  });
+  return <div>Login</div>;
+};
+
+export default Login;
