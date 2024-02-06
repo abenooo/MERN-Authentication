@@ -18,29 +18,32 @@ const Login = () => {
   return (
     <>
       <h1>
-      
         <p>Log in to your account</p>
       </h1>
       <form onSubmit={(e) => onSubmit(e)}>
         <div>
-          <input 
-          type="email"
-          placeholder="Please enter your email address"
-          name="email"
-          value={email}
-          onChange={(e) => onChange(e)}
-          required
+          <input
+            type="email"
+            placeholder="Please enter your email address"
+            name="email"
+            value={email}
+            onChange={(e) => onChange(e)}
+            required
           />
-           <input 
-          type="password"
-          placeholder="Please enter your password"
-          name="password"
-          value={password}
-          onChange={(e) => onChange(e)}
-          minLength={4}
+          <input
+            type="password"
+            placeholder="Please enter your password"
+            name="password"
+            value={password}
+            onChange={(e) => onChange(e)}
+            minLength={4}
           />
         </div>
-
+        <input type="submit" value="login" />
+        <p>Not Registered yet?
+          <Link to='/register'>Register
+          </Link>
+        </p>
       </form>
     </>
   );
